@@ -3,6 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+# Gemfile
+# [...]
+group :development, :test do
+  # [...]
+  gem 'capybara'             # should be there already
+  gem 'selenium-webdriver'   # should be there already
+  gem 'chromedriver-helper'  # add it!
+  gem 'launchy'              # useful for screenshots, add it too!
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
